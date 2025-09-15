@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawya Salon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat', sans-serif;}
+        body { line-height:1.6; color:#333; background:#fff;}
+        header { background:#ffb6c1; padding:20px 40px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
+        header h1 { color:#fff; font-size:28px;}
+        nav a { color:#fff; text-decoration:none; margin-left:20px; font-weight:600;}
+        nav a:hover { text-decoration:underline;}
+        
+        /* Hero Section */
+        .hero { 
+            background:url('hero.jpg') no-repeat center center/cover; 
+            height:80vh; 
+            display:flex; 
+            flex-direction:column;
+            align-items:center; 
+            justify-content:center; 
+            color:#fff; 
+            text-align:center;
+        }
+        .hero h2 { 
+            font-size:48px; 
+            background-color: rgba(0,0,0,0.5); 
+            padding:20px; 
+            border-radius:10px; 
+            margin-bottom:20px;
+        }
+        .hero a {
+            display:inline-block;
+            padding:15px 30px;
+            background:#ff69b4;
+            color:#fff;
+            font-size:20px;
+            font-weight:600;
+            text-decoration:none;
+            border-radius:8px;
+            transition: background 0.3s;
+        }
+        .hero a:hover { background:#901557;}
+
+        section { padding:60px 40px;}
+        .services { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:30px;}
+        .service-box { background:#fff0f5; padding:20px; border-radius:12px; text-align:center; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:transform 0.3s;}
+        .service-box:hover { transform:translateY(-10px);}
+        .service-box img { width:100%; height:180px; object-fit:cover; border-radius:12px; margin-bottom:15px;}
+        .service-box h3 { margin-bottom:10px; color:#ff69b4;}
+        .about { display:flex; flex-wrap:wrap; align-items:center; gap:40px;}
+        .about img { width:100%; max-width:500px; border-radius:12px;}
+        .about-text { flex:1;}
+        .about-text h2 { margin-bottom:20px; color:#ff69b4;}
+        .contact form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:15px;}
+        .contact input, .contact textarea, .contact select { padding:15px; border-radius:8px; border:1px solid #ccc; font-size:16px;}
+        .contact button { padding:15px; border:none; background:#ff69b4; color:#fff; font-size:18px; border-radius:8px; cursor:pointer; transition:background 0.3s;}
+        .contact button:hover { background:#ff1493;}
+        footer { background:#ffb6c1; color:#fff; text-align:center; padding:20px;}
+        footer p { margin-bottom:10px;}
+        footer img { width:30px; margin:0 10px; vertical-align:middle;}
+        @media(max-width:768px){ .about { flex-direction:column; }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dawya Salon</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Dawya Salon</h2>
+        <a href="#contact">Book Now</a>
+    </section>
+
+    <section id="services">
+        <h2 style="text-align:center; margin-bottom:40px; color:#ff69b4;">Our Services</h2>
+        <div class="services">
+            <div class="service-box">
+                <img src="https://source.unsplash.com/600x400/?haircut" alt="Haircuts">
+                <h3>Haircuts</h3>
+                <p>Men, Women, and Kids cuts done professionally with care.</p>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/600x400/?hair-color" alt="Hair Coloring">
+                <h3>Hair Coloring</h3>
+                <p>Modern hair coloring to match your style and personality.</p>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/600x400/?balayage" alt="Highlights & Balayage">
+                <h3>Highlights & Balayage</h3>
+                <p>Brighten up your hair with natural highlights and balayage.</p>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/600x400/?hair-treatment" alt="Hair Treatments">
+                <h3>Hair Treatments</h3>
+                <p>Revitalize your hair with deep conditioning and treatment services.</p>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/600x400/?blowout" alt="Styling & Blowouts">
+                <h3>Styling & Blowouts</h3>
+                <p>Get ready for events or a night out with professional styling.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about">
+            <img src="image1.png" alt="About Dawya Salon">
+            <div class="about-text">
+                <h2>About Dawya Salon</h2>
+                <p>Dawya Salon, located in Sale Hay Essalam, is dedicated to giving you the best hair experience. Our skilled team specializes in haircuts, coloring, highlights, and styling, ensuring you leave our salon looking and feeling amazing every time.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 style="text-align:center; margin-bottom:40px; color:#9b1f5d;">Book an Appointment / Contact Us</h2>
+        <form action="https://formspree.io/f/xzzaqavn" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="_replyto" placeholder="Your Email" required>
+            <input type="text" name="phone" placeholder="Phone Number" required>
+            <select name="service" required>
+                <option value="" disabled selected>Select Service</option>
+                <option value="Haircuts">Haircuts</option>
+                <option value="Hair Coloring">Hair Coloring</option>
+                <option value="Highlights & Balayage">Highlights & Balayage</option>
+                <option value="Hair Treatments">Hair Treatments</option>
+                <option value="Styling & Blowouts">Styling & Blowouts</option>
+            </select>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <textarea name="message" rows="4" placeholder="Additional Notes"></textarea>
+            <button type="submit">Send Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Follow us on:</p>
+        <p>
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/facebook-new.png" alt="Facebook">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok">
+        </p>
+        <p>&copy; 2025 Dawya Salon. All rights reserved.</p>
+    </footer>
+</body>
+</html>
